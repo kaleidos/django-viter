@@ -9,7 +9,7 @@ class Invitation(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
-        return self.token
+        return self.hash
 
 class InvitationUsage(models.Model):
     invitation = models.ForeignKey('Invitation', null=False, blank=False, related_name='usages')
