@@ -6,7 +6,7 @@ import viter
 
 setup(
     name='django-viter',
-    version=inviter.__version__,
+    version=viter.__version__,
     description='Invite users to your Django apps',
     long_description=open('README.rst').read(),
     author='Jesús Espino',
