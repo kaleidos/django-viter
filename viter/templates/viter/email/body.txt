@@ -1,0 +1,16 @@
+{% load i18n %}
+
+{% if message %}
+    {{ message }}
+
+    http://{{ site.domain }}{{ url }}
+{% else %}
+    {% blocktrans with inviter=invitation.inviter domain=site.domain%}
+        Hey 
+        
+        {{ inviter }} has invited you to {{ site }}. Go ahead and register your account
+        now at http://{{ domain }}{{ url }}.
+        
+        The {{ site }} team
+    {% endblocktrans %}
+{% endif %}

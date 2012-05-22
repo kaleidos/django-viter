@@ -1,0 +1,4 @@
+{% load i18n %}
+{% blocktrans with inviter=invitation.inviter %}
+Hey, {{ inviter }} has invited you to {{ site }}!
+{% endblocktrans %}
