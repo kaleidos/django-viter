@@ -5,7 +5,15 @@ from .. import settings
 from django import template
 
 class PlainSendmailHandler(SendmailHandlerBase):
+    '''Plain text Sendmail handler'''
+
     def send(self, invitation, **kwargs):
+        '''
+        Send an invitation to kwargs['email'] or invitation.email
+
+        Generate the email text from the templates viter/email/subject.txt and
+        viter/email/body.txt with \*\*kwargs and invitation in the context.
+        '''
         email = kwargs.get('email', None)
         if not email:
             email = getattr(invitation, 'email', None)
@@ -21,7 +29,7 @@ class PlainSendmailHandler(SendmailHandlerBase):
         else:
             raise Exception('Misconfigured URL generation, define your VITER_URL_NAME or your VITER_URL_STRING')
 
-        ctx = {'email': email, 'invitation': invitation, 'message': message}
+        ctx = {'invitation': invitation}
         ctx.update(kwargs)
         ctx.update(site=Site.objects.get_current(), url=url)
         ctx = template.Context(ctx)

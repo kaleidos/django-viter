@@ -1,11 +1,16 @@
 from .storehandlerbase import StoreHandlerBase
 
 class NoStoreHandler(StoreHandlerBase):
-    def create(self, uniq_id, **kwargs):
+    '''Fake Store Handler, do nothing'''
+
+    def create(self, hash, **kwargs):
+        '''do nothing and return None'''
         return None
 
-    def register_usage(self, uniq_id, **kwargs):
+    def register_usage(self, hash, **kwargs):
+        '''do nothing and return True'''
         return True
 
-    def get(self, uniq_id, **kwargs):
+    def get(self, hash, **kwargs):
+        '''do nothing and return None'''
         return None
