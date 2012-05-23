@@ -181,7 +181,7 @@ htmlhelp_basename = 'django-viterdoc'
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'django-viter.tex', u'django-viter Documentation',
-   u'Jesús Espino', 'manual'),
+   u'Jesús Espino', 'howto'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
