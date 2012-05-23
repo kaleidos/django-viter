@@ -24,4 +24,4 @@ class InvitationUsage(models.Model):
         app_label = 'viter'
 
     def __unicode__(self):
-        return unicode(invitation)+u":"+unicode(user)
+        return unicode(self.invitation)+u":"+unicode(self.user.email)
