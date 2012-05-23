@@ -6,7 +6,7 @@ import viter
 
 setup(
     name='django-viter',
-    version=viter.__version__,
+    version=":versiontools:viter:",
     description='Invite users to your Django apps',
     long_description=open('README.rst').read(),
     author='Jesús Espino',
@@ -21,7 +21,9 @@ setup(
         'Framework :: Django',
     ],
     install_requires=[
-        "shortuuid >= 0.1",
+    ],
+    setup_requires = [
+        'versiontools >= 1.8',
     ],
     include_package_data=True,
     zip_safe=False,

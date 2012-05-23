@@ -112,7 +112,7 @@ There are a couple of editable settings
 
     :Default: ``settings.DEFAULT_FROM_EMAIL``
     
-    The email address used to send invites from    
+    The email address used to send invites from
     
 API
 ---
