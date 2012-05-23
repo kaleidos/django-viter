@@ -1,9 +1,8 @@
 Welcome to django-viter's documentation!
 ========================================
 
-django-viter allows you to invite users to your Django application. Invited
-users are saved as inactive users in your database and activated upon
-registration.
+django-viter allows you to invite users to your Django application and track
+the usage of the invitations.
 
 Installation
 ------------
