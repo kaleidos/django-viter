@@ -8,6 +8,9 @@ class Invitation(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        app_label = 'viter'
+
     def __unicode__(self):
         return self.hash
 
@@ -16,6 +19,9 @@ class InvitationUsage(models.Model):
     user = models.ForeignKey(User, null=True, blank=True, related_name='invitations_used')
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        app_label = 'viter'
 
     def __unicode__(self):
         return unicode(invitation)+u":"+unicode(user)
