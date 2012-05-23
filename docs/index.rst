@@ -22,7 +22,7 @@ Add ``viter``, ``viter.storehandlers.dbstorehandler``, ``django.contrib.sites`` 
     INSTALLED_APPS = (
         'django.contrib.sites',
         'viter'
-        'viter.sotrehandlers.dbstorehandler'
+        'viter.storehandlers.dbstorehandler'
     )
     
    
