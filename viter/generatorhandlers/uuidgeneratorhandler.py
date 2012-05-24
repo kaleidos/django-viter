@@ -6,4 +6,4 @@ class UUIDGeneratorHandler(GeneratorHandlerBase):
 
     def generate(self, **kwargs):
         '''return a new invitation hash generated with uuid4'''
-        return uuid4()
+        return unicode(uuid4())
