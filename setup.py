@@ -12,6 +12,11 @@ setup(
     author='Jesús Espino',
     author_email='jespinog@gmail.com',
     packages=find_packages(),
+    package_data={
+        'viter': [
+            'templates/viter/email/*',
+        ]
+    },
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
